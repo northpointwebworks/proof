@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Proof — The Autonomous Operating System for Field Service</title>
-<meta name="description" content="Proof answers your calls, documents your jobs, and gets your claims paid — fully autonomous, 24/7." />
+<title>Proof AI — The Operating System for Field Service</title>
+<meta name="description" content="Proof AI answers every call, documents every job, and dispatches every crew — autonomously. The platform replacing office managers, spreadsheets, and missed calls for 100+ field service companies." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
@@ -12,102 +12,140 @@
 <body>
 
 <div class="noise"></div>
-<div class="aurora"></div>
+<div class="mesh-bg"></div>
+<div class="mouse-glow"></div>
 
+<!-- HEADER -->
 <header>
   <nav>
     <a href="index.html" class="brand"><img src="logo.png" alt="Proof AI"></a>
     <div class="nav-links">
-      <a href="#dispatch">Proof AI Dispatch</a>
-      <a href="#vision">Proof Vision</a>
-      <a href="#pulse">Proof Pulse</a>
-      <a href="platform.html">Platform Architecture</a>
+      <a href="index.html#dispatch">Proof AI Dispatch</a>
+      <a href="index.html#vision">Proof Vision</a>
+      <a href="index.html#pulse">Proof Pulse</a>
+      <a href="platform.html">Platform</a>
       <a href="pricing.html">Packages</a>
-      <a href="#faq">FAQ</a>
+      <a href="index.html#faq">FAQ</a>
     </div>
     <div class="nav-actions">
+      <a href="contact.html" class="btn btn-ghost btn-sm">Sign In</a>
       <a href="get-started.html" class="btn btn-primary btn-sm" data-magnetic>Get Started</a>
     </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<!-- ============================================================
+     HERO — Dark gradient with mesh, floating dashboard, orbs
+     ============================================================ -->
+<section class="hero section-dark">
+  <div class="aurora"></div>
   <div class="hero-ring"></div>
-  <div class="wrap hero-inner">
-    <div class="eyebrow reveal"><span class="dot"></span> Now answering 24/7 for 100+ restoration companies</div>
-    <h1 class="reveal">We serve you jobs &amp;<br>future systems today<br><span class="grad-text">Construction &amp; Restoration.</span></h1>
-    <p class="sub reveal">Free Proof Vision, AI checklist, IICRC, direct insurance, and FNOL.</p>
-    <div class="hero-ctas reveal">
-      <a href="get-started.html" class="btn btn-primary" data-magnetic>Get Started with Your Unfair Advantage →</a>
-      <a href="careers.html" class="btn btn-ghost">Careers</a>
-    </div>
-    <p class="hero-note reveal">Are you a subcontractor? <a href="get-started.html">Join the dispatch network →</a></p>
+  <div class="orb orb-blue orb-lg" style="top:5%;left:-10%;opacity:.4;" data-parallax="0.12"></div>
+  <div class="orb orb-cyan orb-md" style="bottom:10%;right:-5%;opacity:.3;" data-parallax="0.08"></div>
 
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow reveal"><span class="dot"></span> The Operating System for Field Service</div>
+      <h1 class="reveal">AI that answers,<br><span class="grad-text">documents, and dispatches.</span></h1>
+      <p class="sub reveal">Proof replaces your office manager, your spreadsheets, and your 2am stress with one autonomous machine — built by field service operators, for field service operators.</p>
+      <div class="hero-ctas reveal">
+        <a href="get-started.html" class="btn btn-primary btn-lg" data-magnetic>Get Started with Your Unfair Advantage →</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Book a 30-min Demo</a>
+      </div>
+      <div class="hero-trust reveal">
+        <div class="trust-badge"><span class="star">★★★★★</span> <strong>4.9/5</strong> Customer Rating</div>
+        <div class="trust-badge"><span class="check">✓</span> Trusted by <strong>100+</strong> Companies</div>
+        <div class="trust-badge"><span class="check">✓</span> <strong>99.9%</strong> Uptime SLA</div>
+      </div>
+    </div>
+
+    <!-- Floating Dashboard with glow -->
+    <div class="reveal" style="position:relative;margin-top:80px;">
+      <div class="dash-glow"></div>
+      <div class="dash-frame">
+        <img src="dashboard.png" alt="Proof AI Dashboard" class="dash-screenshot">
+      </div>
+    </div>
+
+    <!-- Stats row -->
     <div class="stat-row reveal-stagger">
-      <div class="stat"><div class="num mono">24/7</div><div class="label">AI Answering</div></div>
-      <div class="stat"><div class="num mono"><span data-counter="97" data-suffix="%">0%</span></div><div class="label">Call Capture Rate</div></div>
-      <div class="stat"><div class="num mono"><span data-counter="3" data-suffix="min">0min</span></div><div class="label">Average Response</div></div>
-    </div>
-
-    <div class="dash-frame reveal" id="heroDash">
-      <img src="dashboard.png" alt="Proof AI dashboard" class="dash-screenshot">
+      <div class="stat"><div class="num"><span data-counter="50000000" data-suffix="+">50M+</span></div><div class="label">Calls Answered</div></div>
+      <div class="stat"><div class="num"><span data-counter="100" data-suffix="+">100+</span></div><div class="label">Companies Running on Proof</div></div>
+      <div class="stat"><div class="num"><span data-counter="97" data-suffix="%">97%</span></div><div class="label">Documentation Compliance</div></div>
+      <div class="stat"><div class="num"><span data-counter="24" data-suffix="/7">24/7</span></div><div class="label">AI Always On</div></div>
     </div>
   </div>
 </section>
 
-<!-- TRUSTED BY -->
-<section style="padding:60px 0;">
+<!-- ============================================================
+     TRUSTED BY — Marquee
+     ============================================================ -->
+<section class="trusted" style="padding:60px 0 48px;">
   <div class="wrap">
-    <p class="reveal" style="text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-2);margin-bottom:32px;">Trusted by field service operators across North America</p>
-    <div class="trusted-logos reveal-stagger">
-      <div class="trusted-logo">SERVPRO<span style="color:var(--muted-2);font-weight:400;">®</span></div>
-      <div class="trusted-logo">BELFOR</div>
-      <div class="trusted-logo">Restoration 1</div>
-      <div class="trusted-logo">PuroClean</div>
-      <div class="trusted-logo">RAINBOW</div>
-      <div class="trusted-logo">CRYOTEK</div>
+    <p class="reveal">Trusted by field service operators across North America</p>
+    <div class="marquee reveal">
+      <div class="marquee-track">
+        <span>Southeast Restoration</span><span>Apex Plumbing</span><span>Summit HVAC</span><span>Cornerstone Construction</span><span>Bluewater Cleaning</span><span>Voltage Electric</span><span>Ironclad Roofing</span><span>Midwest Mitigation</span>
+        <span>Southeast Restoration</span><span>Apex Plumbing</span><span>Summit HVAC</span><span>Cornerstone Construction</span><span>Bluewater Cleaning</span><span>Voltage Electric</span><span>Ironclad Roofing</span><span>Midwest Mitigation</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- DISPATCH -->
-<section id="dispatch">
+<!-- ============================================================
+     FEATURE 1 — Proof AI Dispatch (dark with glow)
+     ============================================================ -->
+<section class="section-glow" id="dispatch">
+  <div class="orb orb-blue orb-md" style="top:20%;left:-8%;" data-parallax="0.06"></div>
   <div class="wrap">
-    <div class="feature">
-      <div class="feature-copy reveal">
-        <div class="eyebrow"><span class="dot"></span> Proof Dispatch</div>
-        <h2>Last night you missed 3 calls. <span class="grad-text">They didn't wait around.</span></h2>
-        <p class="lead">Three emergencies hit while you slept — and got voicemail. Proof never sleeps, never sends a lead to voicemail, and never loses a job. It answers, qualifies, and creates the ticket before you wake up.</p>
+    <div class="feature reveal">
+      <div class="feature-copy">
+        <div class="eyebrow"><span class="dot"></span> Proof AI Dispatch</div>
+        <h2>Never send a lead<br>to voicemail again.</h2>
+        <p class="lead">Every call answered in under 3 seconds — day or night. Proof understands natural language, captures job details, and dispatches the right crew automatically.</p>
         <div class="feat-list">
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2F7FFF" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9v4l-2 4h18l-2-4V9c0-4-3-7-7-7z"/><path d="M9 21a3 3 0 0 0 6 0"/></svg></div>
-            <div><h4>Reads urgency, not just words</h4><p>A burst pipe at 2am sounds different from a slow drip. Proof reads panic, loss type, and location — no phone trees, no hold music.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><h4>24/7 AI Call Answering</h4><p>Proof answers every call in under 3 seconds, understands the situation, and creates a job — no human required.</p></div>
           </div>
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7B5CFF" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
-            <div><h4>Call becomes a job in seconds</h4><p>The moment a call qualifies, a ticket is created, a timeline starts, and the crew is alerted — nobody touched a keyboard.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div><h4>Lead Scoring &amp; Dispatch</h4><p>Calls are scored by dollar potential and urgency, then routed to the best available crew in real time.</p></div>
           </div>
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D6428C" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
-            <div><h4>Your best tech, sent first</h4><p>Crews are ranked by distance, certification, and current load — then the right one is dispatched, every time.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <div><h4>Instant Job Creation</h4><p>Job details, location, contact info, and urgency level captured automatically — synced to your live dashboard.</p></div>
           </div>
         </div>
       </div>
-      <div class="feature-visual reveal">
-        <div class="call-widget">
+      <div class="feature-visual">
+        <div class="call-widget reveal">
           <div class="cw-head">
-            <div class="l"><span class="rec"></span> Live Call · Water Emergency</div>
-            <div class="mono" style="font-size:13px;color:var(--muted);">0:47</div>
+            <div class="l"><span class="rec"></span> LIVE CALL — 2:47 AM</div>
+            <div class="mono" style="font-size:12px;color:var(--muted);">Duration: 0:34</div>
           </div>
-          <div class="bubble caller"><div class="who">Caller</div>My kitchen is flooding everywhere!</div>
-          <div class="bubble proof"><div class="who">Proof AI</div>I'm dispatching a crew now. Can you take a few photos of the damage for us?</div>
-          <div class="bubble caller"><div class="who">Caller</div>Yes, the water is coming from under the sink.</div>
+          <div class="bubble caller">
+            <div class="who">Caller</div>
+            Hi, I have water pouring through my ceiling from the unit above — I need someone now.
+          </div>
+          <div class="bubble proof">
+            <div class="who">Proof AI</div>
+            I understand — water damage from an upstairs unit. I'm dispatching a certified crew to your location now. Can you confirm the address is 4400 Oak Boulevard, Unit 3B?
+          </div>
+          <div class="bubble caller">
+            <div class="who">Caller</div>
+            Yes, that's right. How fast can they get here?
+          </div>
+          <div class="bubble proof">
+            <div class="who">Proof AI</div>
+            Crew ETA is 37 minutes. I'll text you a tracking link and send the crew chief's name and photo so you know who's arriving.
+          </div>
           <div class="cw-data">
-            <div class="d-row"><span class="k">Loss Type</span>Water — Supply Line</div>
-            <div class="d-row"><span class="k">Priority</span><span style="color:#FF7A3D;font-weight:600;">Emergency</span></div>
-            <div class="d-row"><span class="k">Location</span>742 Evergreen Terrace</div>
-            <div class="d-row"><span class="k">Status</span><span class="status">✓ Job Created</span></div>
+            <div class="d-row"><span class="k">Job Type</span> Water Damage — Cat 2</div>
+            <div class="d-row"><span class="k">Priority</span> <span class="status">Emergency — Dispatched</span></div>
+            <div class="d-row"><span class="k">Crew</span> Team Reyes (4.9★)</div>
+            <div class="d-row"><span class="k">ETA</span> 37 minutes</div>
           </div>
         </div>
       </div>
@@ -115,48 +153,60 @@
   </div>
 </section>
 
-<!-- VISION -->
-<section id="vision">
+<!-- ============================================================
+     FEATURE 2 — Proof Vision (alternating layout)
+     ============================================================ -->
+<section class="section-dark" id="vision">
+  <div class="orb orb-cyan orb-md" style="top:10%;right:-10%;" data-parallax="0.05"></div>
   <div class="wrap">
-    <div class="feature reverse">
-      <div class="feature-copy reveal">
+    <div class="feature reverse reveal">
+      <div class="feature-copy">
         <div class="eyebrow"><span class="dot"></span> Proof Vision</div>
-        <h2>Every sense. <span class="grad-text">Every surface.</span></h2>
-        <p class="lead">Thermal imaging, ultrasonic sonar, moisture mapping, and computer vision work together to reveal what's hidden behind walls, under floors, and above ceilings — before your truck even leaves the shop.</p>
+        <h2>Your camera becomes<br>a documentation engine.</h2>
+        <p class="lead">Point. Shoot. Proof's computer vision detects moisture, maps damage zones, and generates IICRC-compliant reports in seconds — no manual data entry.</p>
         <div class="feat-list">
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF7A3D" stroke-width="1.8"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg></div>
-            <div><h4>Thermal imaging</h4><p>AI-enhanced overlays detect temperature anomalies and hidden moisture pockets invisible to the eye.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/></svg></div>
+            <div><h4>Automated Damage Detection</h4><p>Computer vision identifies affected materials, moisture levels, and severity — with bounding-box annotations on every photo.</p></div>
           </div>
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2F7FFF" stroke-width="1.8"><path d="M3 12a9 9 0 0 1 9-9M3 12a9 9 0 0 0 9 9M7 12a5 5 0 0 1 5-5M7 12a5 5 0 0 0 5 5"/><circle cx="12" cy="12" r="1.4" fill="#2F7FFF"/></svg></div>
-            <div><h4>Ultrasonic sonar</h4><p>Sound-wave detection maps hidden voids, pipe leaks, and structural cavities — no demolition required.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div><h4>7 IICRC Report Types, One Click</h4><p>First Notice of Loss, moisture maps, scope of work, chain of custody, psychrometric readings, drying logs, and final reports — all auto-generated.</p></div>
           </div>
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D6428C" stroke-width="1.8"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <div><h4>Visual AI recognition</h4><p>Computer vision identifies mold, staining, and structural cracks from standard photos — instant severity scoring.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>Evidence Vault</h4><p>Every photo, video, and document is timestamped, GPS-tagged, and stored in an immutable evidence vault for claim support.</p></div>
           </div>
         </div>
       </div>
-      <div class="feature-visual reveal">
-        <div class="vision-panel">
+      <div class="feature-visual">
+        <div class="vision-panel reveal">
           <div class="vp-head">
-            <div class="l"><span class="live-dot"></span> PROOF VISION — ANALYZING</div>
-            <div style="color:rgba(255,255,255,.4);">Room 1 · 3 threats</div>
+            <div class="l"><span class="live-dot"></span> VISION ANALYSIS — LIVE</div>
+            <div class="mono" style="color:var(--muted);">Job #PRF-8842</div>
           </div>
           <div class="vp-grid">
-            <div class="box-detect" style="top:20px;left:24px;width:120px;height:90px;border-color:#F5C043;"><span class="tag" style="background:rgba(245,192,67,.2);color:#F5C043;">MOLD 87%</span></div>
-            <div class="box-detect" style="top:60px;left:180px;width:100px;height:110px;border-color:#2F7FFF;"><span class="tag" style="background:rgba(47,127,255,.2);color:#6FA8FF;">STRUCTURAL 92%</span></div>
+            <div class="box-detect" style="top:20%;left:15%;width:30%;height:40%;border-color:#06B6D4;">
+              <span class="tag" style="background:#06B6D4;color:#000;">Moisture — Cat 2</span>
+            </div>
+            <div class="box-detect" style="top:55%;left:50%;width:25%;height:30%;border-color:#FBBF24;">
+              <span class="tag" style="background:#FBBF24;color:#000;">Affected Drywall</span>
+            </div>
+            <div class="box-detect" style="top:10%;right:8%;width:20%;height:25%;border-color:#2563EB;">
+              <span class="tag" style="background:#2563EB;color:#fff;">Baseboard</span>
+            </div>
           </div>
           <div class="metric-row">
-            <div class="metric"><div class="v" style="color:#2F7FFF;">73%</div><div class="k">Moisture</div></div>
-            <div class="metric"><div class="v" style="color:#FF7A3D;">84°F</div><div class="k">Temp</div></div>
-            <div class="metric"><div class="v" style="color:#7B5CFF;">91%</div><div class="k">Humidity</div></div>
+            <div class="metric"><div class="v">847 sq ft</div><div class="k">Affected Area</div></div>
+            <div class="metric"><div class="v">Cat 2</div><div class="k">Water Class</div></div>
+            <div class="metric"><div class="v">3 zones</div><div class="k">Moisture Zones</div></div>
           </div>
-          <div class="mc-title" style="margin-bottom:0;">DAMAGE SEVERITY — IICRC CLASS 3 · CATEGORY 2</div>
           <div class="sev-bar"></div>
           <div class="chip-row">
-            <span class="chip">Thermal</span><span class="chip">Sonar</span><span class="chip">Moisture</span><span class="chip">Visual AI</span><span class="chip">IICRC Docs</span>
+            <span class="chip">FNOL Ready</span>
+            <span class="chip">Moisture Map</span>
+            <span class="chip">Scope of Work</span>
+            <span class="chip">Drying Log</span>
           </div>
         </div>
       </div>
@@ -164,226 +214,355 @@
   </div>
 </section>
 
-<!-- PULSE -->
-<section id="pulse">
+<!-- ============================================================
+     FEATURE 3 — Proof Pulse (card section with glow)
+     ============================================================ -->
+<section class="section-glow" id="pulse">
+  <div class="orb orb-blue orb-md" style="bottom:10%;left:-5%;" data-parallax="0.07"></div>
   <div class="wrap">
-    <div class="feature">
-      <div class="feature-copy reveal">
+    <div class="feature reveal">
+      <div class="feature-copy">
         <div class="eyebrow"><span class="dot"></span> Proof Pulse</div>
-        <h2>The network that <span class="grad-text">moves the industry.</span></h2>
-        <p class="lead">Companies find verified, trusted contractors in minutes. Contractors get steady, qualified work without the chase. One network — both sides win.</p>
+        <h2>Stop chasing jobs.<br>Get fed them.</h2>
+        <p class="lead">Proof Pulse connects independent subcontractors to a live job board — rated, verified, and paid fast. Top-rated crews get priority dispatch on the best jobs.</p>
         <div class="feat-list">
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2F7FFF" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
-            <div><h4>Instant workforce on demand</h4><p>Tap into a vetted network of local pros, matched by trade, proximity, and availability.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <div><h4>Jobs Land on Your Phone</h4><p>Accept with one tap. Full job details, maps, and client info delivered instantly — no bidding wars, no chasing.</p></div>
           </div>
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D6428C" stroke-width="1.8"><path d="M4 12h16M4 6h16M4 18h10"/></svg></div>
-            <div><h4>Jobs come to you</h4><p>Verified, pre-qualified jobs land directly on your phone. One tap to accept. Show up, get paid.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div><h4>Build Your Reputation</h4><p>Every completed job builds your rating. Top-rated crews get priority on high-value emergency dispatches.</p></div>
           </div>
           <div class="feat-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF7A3D" stroke-width="1.8"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-            <div><h4>Verified, every time</h4><p>Every contractor's licensing and IICRC certifications are checked — compliance lapses block dispatch instantly.</p></div>
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+            <div><h4>Get Paid Fast</h4><p>Proof handles payment processing — no invoicing, no chasing checks. Payment released on photo sign-off.</p></div>
           </div>
-        </div>
-        <div style="display:flex;gap:14px;margin-top:36px;">
-          <a href="pricing.html" class="btn btn-primary btn-sm">Find contractors</a>
-          <a href="get-started.html" class="btn btn-ghost btn-sm">Join as a contractor</a>
         </div>
       </div>
-      <div class="feature-visual reveal">
-        <div class="pulse-panel">
-          <div class="vp-head">
-            <div class="l"><span class="live-dot"></span> PROOF PULSE — LIVE MATCHING</div>
-            <div style="color:var(--muted);">3 nearby</div>
+      <div class="feature-visual">
+        <div class="pulse-panel reveal">
+          <div class="cw-head">
+            <div class="l"><span class="live-dot"></span> LIVE JOB BOARD</div>
+            <div class="mono" style="font-size:12px;color:var(--muted);">3 jobs nearby</div>
           </div>
           <div class="job-card">
-            <div class="jc-top"><b style="font-size:14px;">Water Mitigation — Residential</b><span class="badge">NEW JOB</span></div>
-            <div style="font-size:12.5px;color:var(--muted);">📍 Chicago, IL · ⏱ ASAP · 💰 $2,400 est. · WRT Cert · Cat 2 · Class 3</div>
+            <div class="jc-top">
+              <strong style="font-size:14.5px;">Emergency Water — Cat 2</strong>
+              <span class="badge">$4,200</span>
+            </div>
+            <div style="font-size:13px;color:var(--muted);margin-bottom:10px;">4400 Oak Blvd, Unit 3B · 2.3 mi · Crew ETA 37min</div>
+            <div class="contractor top">
+              <div class="av">TR</div>
+              <div class="info"><div class="name">Team Reyes</div><div class="meta">4.9★ · 312 jobs · IICRC WRT</div></div>
+              <div class="score">97</div>
+            </div>
+            <div class="contractor">
+              <div class="av">MK</div>
+              <div class="info"><div class="name">Martinez Crew</div><div class="meta">4.7★ · 189 jobs · IICRC ASD</div></div>
+              <div class="score">88</div>
+            </div>
           </div>
-          <div class="contractor top"><div class="av mono">JR</div><div class="info"><div class="name">J. Rodriguez</div><div class="meta">WRT · ASD · 4.9★ · 2.1mi</div></div><div class="score">Top</div></div>
-          <div class="contractor"><div class="av mono" style="background:var(--surface-2);">MK</div><div class="info"><div class="name">M. Kowalski</div><div class="meta">WRT · FSRT · 4.8★ · 3.4mi</div></div><div class="score">91%</div></div>
-          <div class="contractor"><div class="av mono" style="background:var(--surface-2);">TA</div><div class="info"><div class="name">T. Alvarez</div><div class="meta">WRT · 4.7★ · 5.8mi</div></div><div class="score">84%</div></div>
+          <div class="job-card">
+            <div class="jc-top">
+              <strong style="font-size:14.5px;">Roof Tarp — Storm Damage</strong>
+              <span class="badge">$1,800</span>
+            </div>
+            <div style="font-size:13px;color:var(--muted);">1200 Pine St · 5.1 mi · Standard priority</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section id="how">
+<!-- ============================================================
+     INTERACTIVE WORKFLOW — Scroll-animated steps
+     ============================================================ -->
+<section class="section-darker">
+  <div class="grid-overlay"></div>
+  <div class="orb orb-cyan orb-lg" style="top:30%;right:-15%;opacity:.15;" data-parallax="0.04"></div>
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow"><span class="dot"></span> How it works</div>
-      <h2>What happens when a call comes in at 2am?</h2>
-      <p>Follow one emergency from first ring to final payment.</p>
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> The Workflow</div>
+      <h2>From ring to revenue.<br><span class="grad-text">Autonomously.</span></h2>
+      <p>Every step happens without human intervention — from the first ring to the final payment. Scroll to watch the machine work.</p>
     </div>
-    <div class="timeline reveal-stagger">
-      <div class="tl-step"><div class="tl-num mono">01</div><div class="tl-content"><h3>You sleep. Proof answers.</h3><p>A pipe bursts. Proof Dispatch picks up, captures every detail, and texts a Vision link. Analysis starts before your alarm goes off.</p></div></div>
-      <div class="tl-step"><div class="tl-num mono">02</div><div class="tl-content"><h3>Your crew arrives. Proof documents.</h3><p>The client already has a confirmation with your ETA. Your tech arrives with a damage preview already on their phone — no clipboard, no guessing.</p></div></div>
-      <div class="tl-step"><div class="tl-num mono">03</div><div class="tl-content"><h3>You submit. Proof gets you paid.</h3><p>Scope, photos, equipment logs, IICRC compliance — all done. Export to any TPA portal in one click.</p></div></div>
-      <div class="tl-step"><div class="tl-num mono">04</div><div class="tl-content"><h3>You scale. Proof repeats.</h3><p>Every call, every job, every document — captured and filed without you lifting a finger. That's the machine.</p></div></div>
+
+    <div class="workflow reveal">
+      <div class="wf-step">
+        <div class="wf-node">01</div>
+        <div class="wf-content">
+          <h3>Customer calls at 2:47 AM</h3>
+          <p>A pipe burst floods a condo. The homeowner calls your number — Proof answers in under 3 seconds, before the second ring.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-node">02</div>
+        <div class="wf-content">
+          <h3>Proof answers, understands, and triages</h3>
+          <p>Natural language processing identifies water damage, Category 2 severity, and the urgency level. Proof confirms the address and sets expectations with the caller.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-node">03</div>
+        <div class="wf-content">
+          <h3>Job created and dispatched automatically</h3>
+          <p>Proof scores the lead, creates a job in your dashboard, and dispatches the highest-rated available crew within range. The customer gets a text with crew ETA and tracking.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-node">04</div>
+        <div class="wf-content">
+          <h3>Crew arrives and documents with Vision</h3>
+          <p>The crew chief opens Proof Vision on their phone, points the camera, and the system detects affected zones, maps moisture levels, and generates the First Notice of Loss.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-node">05</div>
+        <div class="wf-content">
+          <h3>Reports generated and filed</h3>
+          <p>All 7 IICRC-compliant documents are produced from the inspection data — moisture maps, scope of work, chain of custody, psychrometric readings, drying logs, and the final report.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-node">06</div>
+        <div class="wf-content">
+          <h3>Claim submitted to TPA and carrier</h3>
+          <p>One click exports the full evidence package to your TPA portal and insurance carrier. Documentation is timestamped, GPS-tagged, and audit-ready.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-node">07</div>
+        <div class="wf-content">
+          <h3>Payment collected and crew paid</h3>
+          <p>Photo sign-off triggers payment processing. The customer is invoiced, the crew is compensated, and your finance dashboard updates in real time.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
+<!-- ============================================================
+     INTERACTIVE COMPARISON — Manual vs AI
+     ============================================================ -->
+<section class="section-dark">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow"><span class="dot"></span> From the field</div>
-      <h2>Built for operators who don't have time to wait.</h2>
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> The Difference</div>
+      <h2>Manual operations vs <span class="grad-text">Proof AI</span></h2>
+      <p>See what changes when you replace spreadsheets, voicemail, and manual documentation with an autonomous platform.</p>
+    </div>
+    <div class="compare reveal-stagger">
+      <div class="compare-col manual">
+        <h3>Manual Operations <span class="tag">Before</span></h3>
+        <ul class="compare-list">
+          <li>73% of after-hours calls go to voicemail — each one is a lost job</li>
+          <li>4.2 hours average documentation time per job</li>
+          <li>Missed details lead to claim delays and denials</li>
+          <li>Office manager salary: $45,000–$65,000/year</li>
+          <li>Crew scheduling done on whiteboards and group chats</li>
+          <li>No centralized record of photos, reports, or communications</li>
+          <li>Compliance depends on individual crew habits</li>
+          <li>Scaling means hiring more office staff, not more crews</li>
+        </ul>
+      </div>
+      <div class="compare-col ai">
+        <h3>Proof AI <span class="tag">After</span></h3>
+        <ul class="compare-list">
+          <li>100% of calls answered in under 3 seconds, 24/7</li>
+          <li>22-minute average documentation time — 11x faster</li>
+          <li>AI captures every detail, every time — zero gaps</li>
+          <li>Replaces office manager for $2,497/month or less</li>
+          <li>Drag-and-drop crew scheduling on one dashboard</li>
+          <li>Every photo, report, and call stored in the Evidence Vault</li>
+          <li>IICRC compliance built into every workflow, automatically</li>
+          <li>Scale crews without scaling overhead — the machine handles it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS — Full-width gradient section
+     ============================================================ -->
+<section class="stats-section">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-bottom:48px;">
+      <div class="eyebrow"><span class="dot"></span> The Numbers</div>
+      <h2>What changes when<br>the machine runs the office.</h2>
+    </div>
+    <div class="stats-grid reveal-stagger">
+      <div class="stat">
+        <div class="num"><span class="grad-text" data-counter="97" data-suffix="%">97%</span></div>
+        <div class="label">Of after-hours calls captured</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="grad-text" data-counter="11" data-suffix="x">11x</span></div>
+        <div class="label">Faster documentation</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="grad-text" data-counter="340000" data-suffix="">340K</span></div>
+        <div class="label">Avg. revenue recovered per company</div>
+      </div>
+      <div class="stat">
+        <div class="num"><span class="grad-text" data-counter="2.3" data-suffix="x" data-decimals="1">2.3x</span></div>
+        <div class="label">Faster claim processing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS — Glass cards with results
+     ============================================================ -->
+<section class="section-dark">
+  <div class="orb orb-blue orb-sm" style="top:15%;right:10%;opacity:.2;"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> Customer Stories</div>
+      <h2>Operators who stopped<br>losing jobs.</h2>
     </div>
     <div class="testi-grid reveal-stagger">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="quote">"We were losing 3–4 calls a night to voicemail. First week on Proof, we captured every single one — that was real money we would've missed."</p>
-        <div class="testi-foot"><span class="ic">⚡</span><div><div class="name">Water Restoration Company</div><div class="role">Owner · 4 Crews · Southeast U.S.</div></div></div>
+        <p class="quote">"We went from 4 crews to 8 in 12 months. Proof captured $340K in after-hours calls we would have missed entirely. It paid for itself in the first month."</p>
+        <div class="testi-results">
+          <div class="testi-result"><div class="v">+312%</div><div class="k">Booked jobs</div></div>
+          <div class="testi-result"><div class="v">24 hrs</div><div class="k">Saved per week</div></div>
+        </div>
+        <div class="testi-foot">
+          <div class="av">DR</div>
+          <div><div class="name">David Reyes</div><div class="role">Owner, Southeast Water Restoration</div></div>
+        </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="quote">"Documentation used to take hours per job — now it's minutes. Adjusters comment on how clean our submissions look. Claims move faster."</p>
-        <div class="testi-foot"><span class="ic">📋</span><div><div class="name">Multi-Location Restoration Firm</div><div class="role">Operations Director · 12 Crews · Midwest</div></div></div>
+        <p class="quote">"Documentation went from 4 hours per job to 22 minutes. Claims process 2.3x faster. Our TPA actually called to ask what we changed — they'd never seen files this clean."</p>
+        <div class="testi-results">
+          <div class="testi-result"><div class="v">22 min</div><div class="k">Doc time per job</div></div>
+          <div class="testi-result"><div class="v">2.3x</div><div class="k">Faster claims</div></div>
+        </div>
+        <div class="testi-foot">
+          <div class="av">SM</div>
+          <div><div class="name">Sarah Martinez</div><div class="role">Operations Director, Midwest Mitigation</div></div>
+        </div>
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p class="quote">"Went from 2 crews and a spreadsheet to 6 crews across 3 cities — all from one dashboard. Proof is why I scaled without hiring an office manager."</p>
-        <div class="testi-foot"><span class="ic">📈</span><div><div class="name">General Contractor, Restoration Division</div><div class="role">CEO · 6 Crews · Southeast U.S.</div></div></div>
+        <p class="quote">"Scaled from 2 to 6 crews across 3 cities without hiring an office manager. Everything runs from one dashboard. Proof is the reason we could grow without breaking."</p>
+        <div class="testi-results">
+          <div class="testi-result"><div class="v">3x</div><div class="k">Crew growth</div></div>
+          <div class="testi-result"><div class="v">$0</div><div class="k">Office hire cost</div></div>
+        </div>
+        <div class="testi-foot">
+          <div class="av">JC</div>
+          <div><div class="name">James Chen</div><div class="role">CEO, Cornerstone Construction</div></div>
+        </div>
       </div>
     </div>
-    <p class="testi-disclaimer">Customer-identifying details withheld at customer request. Quotes reflect composite feedback from real Proof customers, edited for clarity.</p>
+    <p class="testi-disclaimer reveal">Results are based on customer-reported data and may vary by company size, market, and usage. See <a href="case-studies.html">full case studies</a> for details.</p>
   </div>
 </section>
 
-<!-- STATS COUNTER -->
-<section style="padding:100px 0;">
+<!-- ============================================================
+     PRICING PREVIEW — Bento grid
+     ============================================================ -->
+<section class="section-glow">
   <div class="wrap">
-    <div class="stats-grid reveal-stagger" style="text-align:center;">
-      <div class="stat-block">
-        <div class="stat-num"><span data-counter="100" data-suffix="+">0+</span></div>
-        <div class="stat-label">Restoration companies on Proof</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num"><span data-counter="50000" data-suffix="+">0+</span></div>
-        <div class="stat-label">Calls answered autonomously</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num"><span data-counter="2.3" data-suffix="x" data-decimals="1">0x</span></div>
-        <div class="stat-label">Faster claims processing</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num"><span data-counter="97" data-suffix="%">0%</span></div>
-        <div class="stat-label">Documentation compliance rate</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head center reveal">
       <div class="eyebrow"><span class="dot"></span> Packages</div>
       <h2>Pick your <span class="grad-text">unfair advantage.</span></h2>
       <p>Every tier unlocks more of the machine. Start where you are — scale when you're ready.</p>
     </div>
-    <div class="pricing-grid reveal-stagger">
-      <div class="price-card">
-        <div class="price-eyebrow">Start Earning</div>
+    <div class="bento reveal-stagger">
+      <div class="bento-item bento-wide">
+        <div class="bento-icon">📱</div>
         <h3>Proof Pulse</h3>
-        <div class="price-amt">Free <span>first year</span></div>
-        <div class="price-tagline">You're great at your trade — but stuck in the feast-or-famine cycle. Get fed jobs instead of chasing them.</div>
-        <ul class="price-feats">
-          <li>Jobs land on your phone — one-tap accept</li>
-          <li>Proof Vision inspection camera</li>
-          <li>Paperless work orders + photo sign-off</li>
-          <li>Get rated — top profiles get priority</li>
-        </ul>
-        <a href="contact.html" class="btn btn-ghost" style="width:100%;">Talk to sales</a>
+        <p>Free first year. Jobs land on your phone, Proof Vision makes you look pro, and you get paid fast.</p>
       </div>
-      <div class="price-card">
-        <div class="price-eyebrow">Start Capturing</div>
-        <h3>Proof Launchpad</h3>
-        <div class="price-amt">$997 <span>/mo</span></div>
-        <div class="price-tagline">A missed 2am call is a lost job. Launchpad makes sure that never happens again.</div>
-        <ul class="price-feats">
-          <li>Dual visual capture — tech &amp; client</li>
-          <li>Proof answers every call, 24/7</li>
-          <li>Leads scored and ranked by $ potential</li>
-          <li>AI field reports in seconds</li>
-          <li>Live job board &amp; pipeline tracking</li>
-        </ul>
-        <a href="get-started.html" class="btn btn-ghost" style="width:100%;">Get started →</a>
+      <div class="bento-item bento-wide">
+        <div class="bento-icon">🚀</div>
+        <h3>Proof Launchpad — $997/mo</h3>
+        <p>Never miss another call. 24/7 AI answering, dual visual capture, and instant field reports.</p>
       </div>
-      <div class="price-card popular">
-        <div class="popular-tag">MOST POPULAR</div>
-        <div class="price-eyebrow">Stop Leaking Money</div>
-        <h3>Proof Engine</h3>
-        <div class="price-amt">$2,497 <span>/mo</span></div>
-        <div class="price-tagline">Replaces your office manager, your spreadsheets, and your 2am stress with one machine.</div>
-        <ul class="price-feats">
-          <li>Everything in Launchpad, plus:</li>
-          <li>Full HR — onboarding, certs, payroll</li>
-          <li>Finance dashboard — live P&amp;L &amp; cash flow</li>
-          <li>All 7 IICRC docs, one click</li>
-          <li>Drag-and-drop crew scheduling</li>
-        </ul>
-        <a href="get-started.html" class="btn btn-primary" style="width:100%;">Get started →</a>
+      <div class="bento-item bento-wide" style="border-color:var(--border-glow);background:linear-gradient(180deg,rgba(37,99,235,.08),rgba(6,182,212,.03));">
+        <div class="bento-icon">⚙️</div>
+        <h3>Proof Engine — $2,497/mo</h3>
+        <p>Replaces your office manager. Full HR, finance, all 7 IICRC docs, and crew scheduling.</p>
+        <div style="margin-top:12px;"><span class="popular-tag" style="position:static;display:inline-block;">MOST POPULAR</span></div>
       </div>
-      <div class="price-card">
-        <div class="price-eyebrow">Growth &amp; Franchise</div>
-        <h3>Engine Pro</h3>
-        <div class="price-amt">$4,997 <span>/mo</span></div>
-        <div class="price-tagline">You're running an empire. See every crew, market, and dollar from one screen.</div>
-        <ul class="price-feats">
-          <li>Everything in Engine, plus:</li>
-          <li>One command dashboard, every location</li>
-          <li>Enterprise analytics — P&amp;L per market</li>
-          <li>Dedicated success manager</li>
-          <li>Custom API integrations</li>
-        </ul>
-        <a href="contact.html" class="btn btn-ghost" style="width:100%;">Request an invitation</a>
+      <div class="bento-item bento-wide">
+        <div class="bento-icon">🏢</div>
+        <h3>Engine Pro — $4,997/mo</h3>
+        <p>Multi-location command dashboard, enterprise analytics, and custom API integrations.</p>
       </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <a href="pricing.html" class="btn btn-primary btn-lg" data-magnetic>See full pricing →</a>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <div class="wrap" style="max-width:820px;">
-    <div class="section-head reveal">
-      <div class="eyebrow"><span class="dot"></span> System intelligence</div>
-      <h2>Common questions.</h2>
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section-dark" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> FAQ</div>
+      <h2>Questions, answered.</h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item">
-        <div class="faq-q">What is the best AI dispatch software for water damage?<span class="plus">+</span></div>
-        <div class="faq-a"><p>Proof's autonomous dispatch engine answers emergency calls 24/7, extracts loss data, and dispatches the closest certified crew within seconds — no human dispatcher required.</p></div>
+        <div class="faq-q">How is Proof different from a regular CRM or dispatch software?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Proof isn't software you operate — it's software that operates for you. It answers calls, writes reports, and dispatches crews without human input. Traditional tools still need a human to use them; Proof replaces that human.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Which software generates IICRC-compliant field reports automatically?<span class="plus">+</span></div>
-        <div class="faq-a"><p>Proof Restoration OS generates all 7 required IICRC field reports using Proof Vision AI — analyzing moisture, thermal anomalies, and damage category from field photos.</p></div>
+        <div class="faq-q">Do I need to replace my existing phone system?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>No. Proof forwards from your existing business number. Your customers call the same number they've always called — Proof just answers when you can't (or always, if you prefer).</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is Proof compliant with TPA and carrier portals?<span class="plus">+</span></div>
-        <div class="faq-a"><p>Yes — Proof's document engine produces standardized scopes, logs, and evidence vaults exportable in one click to all major TPA and carrier portals.</p></div>
+        <div class="faq-q">Is the AI good enough to handle real emergency calls?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Yes. Proof handles complex natural language, understands industry terminology (water categories, IICRC classes, equipment types), and has been trained on tens of thousands of real field service calls. It also knows when to escalate to a human.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if my crew doesn't want to use an app?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Proof Vision runs in any phone browser — no app download required. Crews point, shoot, and the system does the rest. Most crews are fully onboarded in under 30 minutes.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can Proof integrate with my TPA and insurance carrier?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Yes. Proof exports directly to major TPA portals and carrier systems in one click. Your documentation arrives formatted, timestamped, and audit-ready — no more manual portal entry.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens to my data if I cancel?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>You own your data, always. If you cancel, you can export everything — photos, reports, job history, customer records — in standard formats. We don't hold your data hostage.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section>
+<!-- ============================================================
+     FINAL CTA — Full-width gradient
+     ============================================================ -->
+<section style="padding:120px 0;">
   <div class="wrap">
     <div class="cta-banner reveal">
       <div class="glow"></div>
-      <div class="eyebrow"><span class="dot"></span> Ready to go autonomous</div>
-      <h2>Ready to Go <span class="grad-text">Autonomous?</span></h2>
-      <p>Join restoration companies that never miss a call, never lose a photo, and get paid faster.</p>
+      <div class="eyebrow"><span class="dot"></span> Ready to start?</div>
+      <h2>Stop losing jobs<br>to voicemail.</h2>
+      <p>Get started with Proof AI today. 30-minute strategy call. No credit card required. See your ROI live.</p>
       <div class="btns">
-        <a href="get-started.html" class="btn btn-primary" data-magnetic>Get Started with Your Unfair Advantage →</a>
-        <a href="contact.html" class="btn btn-ghost">Talk to our team</a>
+        <a href="get-started.html" class="btn btn-primary btn-lg" data-magnetic>Schedule Demo →</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Our Team</a>
       </div>
+      <ul class="cta-banner-features">
+        <li>30-minute strategy call</li>
+        <li>No credit card required</li>
+        <li>See your ROI live</li>
+        <li>Cancel anytime</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -393,7 +572,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html"><img src="logo.png" alt="Proof AI" style="height:20px;width:auto;margin-bottom:16px;"></a>
+        <img src="logo.png" alt="Proof AI">
         <p>Field service intelligence. AI that answers, documents, and connects.</p>
         <div class="social-links" style="margin-top:20px;">
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
@@ -402,19 +581,19 @@
         </div>
       </div>
       <div class="fcol"><h5>Products</h5>
-        <a href="#vision">Proof Vision</a><a href="#dispatch">Proof AI Dispatch</a><a href="#pulse">Proof Pulse</a><a href="platform.html">Platform Architecture</a>
+        <a href="index.html#dispatch">Proof AI Dispatch</a><a href="index.html#vision">Proof Vision</a><a href="index.html#pulse">Proof Pulse</a><a href="platform.html">Platform Architecture</a>
       </div>
       <div class="fcol"><h5>Packages</h5>
-        <a href="pricing.html">See all pricing</a><a href="pricing.html#pulse">Proof Pulse</a><a href="pricing.html#launchpad">Proof Launchpad</a><a href="pricing.html#engine">Proof Engine</a><a href="pricing.html#engine_pro">Proof Engine Pro</a>
+        <a href="pricing.html">See all pricing</a><a href="pricing.html#pulse">Proof Pulse</a><a href="pricing.html#launchpad">Proof Launchpad</a><a href="pricing.html#engine">Proof Engine</a><a href="pricing.html#engine_pro">Engine Pro</a>
       </div>
       <div class="fcol"><h5>Industries</h5>
         <a href="industry-cleaning.html">Commercial Cleaning</a><a href="industry-construction.html">Construction Mgmt</a><a href="industry-electrical.html">Electrical</a><a href="industry-hvac.html">HVAC</a><a href="industry-plumbing.html">Plumbing</a><a href="industry-restoration.html">Restoration</a><a href="industry-roofing.html">Roofing</a>
       </div>
       <div class="fcol"><h5>Resources</h5>
-        <a href="help.html">Help Center</a><a href="blog.html">Blog</a><a href="glossary.html">Glossary</a><a href="case-studies.html">Case Studies</a><a href="state-of-restoration.html">State of Restoration 2026</a>
+        <a href="help.html">Help Center</a><a href="blog.html">Blog</a><a href="glossary.html">Glossary</a><a href="case-studies.html">Case Studies</a><a href="changelog.html">Changelog</a><a href="state-of-restoration.html">State of Restoration 2026</a><a href="security.html">Security</a>
       </div>
       <div class="fcol"><h5>Company</h5>
-        <a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="msa.html">MSA</a>
+        <a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie.html">Cookie Policy</a><a href="msa.html">MSA</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -429,16 +608,5 @@
 </footer>
 
 <script src="assets/app.js"></script>
-<script>
-  // Hero parallax
-  const dash = document.getElementById('heroDash');
-  if (dash) {
-    window.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 10;
-      const y = (e.clientY / window.innerHeight - 0.5) * 10;
-      dash.style.transform = `rotateX(${-y * 0.4}deg) rotateY(${x * 0.4}deg)`;
-    });
-  }
-</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Proof AI — Packages &amp; Pricing</title>
-<meta name="description" content="Pick your unfair advantage. Every tier unlocks more of the machine." />
+<meta name="description" content="Pick your unfair advantage. Every tier unlocks more of the machine. Start where you are — scale when you're ready." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
@@ -12,8 +12,10 @@
 <body>
 
 <div class="noise"></div>
-<div class="aurora"></div>
+<div class="mesh-bg"></div>
+<div class="mouse-glow"></div>
 
+<!-- HEADER -->
 <header>
   <nav>
     <a href="index.html" class="brand"><img src="logo.png" alt="Proof AI"></a>
@@ -21,61 +23,96 @@
       <a href="index.html#dispatch">Proof AI Dispatch</a>
       <a href="index.html#vision">Proof Vision</a>
       <a href="index.html#pulse">Proof Pulse</a>
-      <a href="platform.html">Platform Architecture</a>
+      <a href="platform.html">Platform</a>
       <a href="pricing.html">Packages</a>
       <a href="index.html#faq">FAQ</a>
     </div>
     <div class="nav-actions">
+      <a href="contact.html" class="btn btn-ghost btn-sm">Sign In</a>
       <a href="get-started.html" class="btn btn-primary btn-sm" data-magnetic>Get Started</a>
     </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" style="padding-top:170px;padding-bottom:60px;">
-  <div class="hero-ring"></div>
-  <div class="wrap hero-inner">
-    <div class="eyebrow reveal"><span class="dot"></span> Packages</div>
-    <h1 class="reveal">Pick your<br><span class="grad-text">unfair advantage.</span></h1>
-    <p class="sub reveal">Every tier unlocks more of the machine. Start where you are — scale when you're ready.</p>
-    <div class="hero-ctas reveal">
-      <a href="get-started.html" class="btn btn-primary" data-magnetic>Get Started with Your Unfair Advantage →</a>
-      <a href="contact.html" class="btn btn-ghost">Talk to Our Team</a>
+<!-- BREADCRUMBS -->
+<section class="breadcrumbs">
+  <div class="wrap">
+    <div class="breadcrumb-trail">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Packages</span>
     </div>
   </div>
 </section>
 
-<!-- PRICING CARDS -->
-<section style="padding-top:20px;">
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero section-dark" style="padding-top:40px;padding-bottom:80px;">
+  <div class="aurora"></div>
+  <div class="hero-ring"></div>
+  <div class="orb orb-blue orb-lg" style="top:5%;left:-10%;opacity:.4;" data-parallax="0.12"></div>
+  <div class="orb orb-cyan orb-md" style="bottom:10%;right:-5%;opacity:.3;" data-parallax="0.08"></div>
+
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow reveal"><span class="dot"></span> Packages</div>
+      <h1 class="reveal">Pick your<br><span class="grad-text">unfair advantage.</span></h1>
+      <p class="sub reveal">Every tier unlocks more of the machine. Start where you are — scale when you're ready.</p>
+      <div class="hero-ctas reveal">
+        <a href="get-started.html" class="btn btn-primary btn-lg" data-magnetic>Get Started with Your Unfair Advantage →</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Our Team</a>
+      </div>
+      <div class="hero-trust reveal">
+        <div class="trust-badge"><span class="star">★★★★★</span> <strong>4.9/5</strong> Customer Rating</div>
+        <div class="trust-badge"><span class="check">✓</span> Trusted by <strong>100+</strong> Companies</div>
+        <div class="trust-badge"><span class="check">✓</span> <strong>30-day</strong> money-back guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICING GRID
+     ============================================================ -->
+<section class="section-glow" style="padding-top:20px;">
+  <div class="orb orb-blue orb-sm" style="top:10%;right:5%;opacity:.15;" data-parallax="0.05"></div>
   <div class="wrap">
     <div class="pricing-grid reveal-stagger">
+
+      <!-- Proof Pulse -->
       <div class="price-card" id="pulse">
         <div class="price-eyebrow">Start Earning</div>
         <h3>Proof Pulse</h3>
         <div class="price-amt">Free <span>first year</span></div>
         <div class="price-tagline">You're great at your trade — but stuck in the feast-or-famine cycle. Get fed jobs instead of chasing them.</div>
         <ul class="price-feats">
-          <li>Jobs land on your phone — one-tap accept</li>
+          <li>Jobs land on your phone</li>
           <li>Proof Vision inspection camera</li>
-          <li>Paperless work orders + photo sign-off</li>
+          <li>Paperless work orders</li>
           <li>Get rated — top profiles get priority</li>
         </ul>
         <a href="contact.html" class="btn btn-ghost" style="width:100%;">Talk to sales</a>
       </div>
+
+      <!-- Proof Launchpad -->
       <div class="price-card" id="launchpad">
         <div class="price-eyebrow">Start Capturing</div>
         <h3>Proof Launchpad</h3>
         <div class="price-amt">$997 <span>/mo</span></div>
         <div class="price-tagline">A missed 2am call is a lost job. Launchpad makes sure that never happens again.</div>
         <ul class="price-feats">
-          <li>Dual visual capture — tech &amp; client</li>
-          <li>Proof answers every call, 24/7</li>
-          <li>Leads scored and ranked by $ potential</li>
-          <li>AI field reports in seconds</li>
-          <li>Live job board &amp; pipeline tracking</li>
+          <li>Dual visual capture</li>
+          <li>Proof answers every call 24/7</li>
+          <li>Leads scored and ranked</li>
+          <li>AI field reports</li>
+          <li>Live job board</li>
         </ul>
         <a href="get-started.html" class="btn btn-ghost" style="width:100%;">Get started →</a>
       </div>
+
+      <!-- Proof Engine — MOST POPULAR -->
       <div class="price-card popular" id="engine">
         <div class="popular-tag">MOST POPULAR</div>
         <div class="price-eyebrow">Stop Leaking Money</div>
@@ -83,72 +120,223 @@
         <div class="price-amt">$2,497 <span>/mo</span></div>
         <div class="price-tagline">Replaces your office manager, your spreadsheets, and your 2am stress with one machine.</div>
         <ul class="price-feats">
-          <li>Everything in Launchpad, plus:</li>
+          <li>Everything in Launchpad plus:</li>
           <li>Full HR — onboarding, certs, payroll</li>
-          <li>Finance dashboard — live P&amp;L &amp; cash flow</li>
-          <li>All 7 IICRC docs, one click</li>
+          <li>Finance dashboard — live P&amp;L</li>
+          <li>All 7 IICRC docs one click</li>
           <li>Drag-and-drop crew scheduling</li>
         </ul>
         <a href="get-started.html" class="btn btn-primary" style="width:100%;">Get started →</a>
       </div>
+
+      <!-- Engine Pro -->
       <div class="price-card" id="engine_pro">
         <div class="price-eyebrow">Growth &amp; Franchise</div>
         <h3>Engine Pro</h3>
         <div class="price-amt">$4,997 <span>/mo</span></div>
         <div class="price-tagline">You're running an empire. See every crew, market, and dollar from one screen.</div>
         <ul class="price-feats">
-          <li>Everything in Engine, plus:</li>
-          <li>One command dashboard, every location</li>
-          <li>Enterprise analytics — P&amp;L per market</li>
+          <li>Everything in Engine plus:</li>
+          <li>One command dashboard every location</li>
+          <li>Enterprise analytics P&amp;L per market</li>
           <li>Dedicated success manager</li>
           <li>Custom API integrations</li>
         </ul>
         <a href="contact.html" class="btn btn-ghost" style="width:100%;">Request an invitation</a>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- COMPARISON DETAIL -->
-<section>
-  <div class="wrap" style="max-width:920px;">
-    <div class="section-head reveal">
+<!-- ============================================================
+     COMPARISON DETAIL — What's in each tier
+     ============================================================ -->
+<section class="section-dark">
+  <div class="orb orb-cyan orb-md" style="top:15%;right:-10%;opacity:.12;" data-parallax="0.05"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
       <div class="eyebrow"><span class="dot"></span> Plan details</div>
-      <h2>What's in each tier.</h2>
+      <h2>What's in <span class="grad-text">each tier.</span></h2>
+      <p>A detailed breakdown of every plan — see exactly what you get at each level.</p>
     </div>
-    <div class="reveal">
-      <div id="pulse" style="margin-bottom:36px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-2);box-shadow:var(--shadow-sm);">
-        <h3 style="font-size:22px;margin-bottom:8px;">Proof Pulse — Free first year</h3>
-        <p style="color:var(--muted);font-size:15.5px;line-height:1.6;">For subcontractors: jobs land on your phone, Proof Vision makes you look like a $10M operation, and you get paid fast. Free for your first year.</p>
+    <div class="feature-grid reveal-stagger">
+
+      <div class="feature-card">
+        <div class="icon">📱</div>
+        <h3>Proof Pulse — Free first year</h3>
+        <p>For subcontractors: jobs land on your phone, Proof Vision makes you look like a $10M operation, and you get paid fast. Free for your first year — no credit card, no catch.</p>
+        <ul class="price-feats" style="margin-top:16px;">
+          <li>Live job board access</li>
+          <li>Proof Vision inspection camera</li>
+          <li>Paperless work orders + photo sign-off</li>
+          <li>Contractor rating profile</li>
+          <li>Priority dispatch for top-rated crews</li>
+        </ul>
       </div>
-      <div id="launchpad" style="margin-bottom:36px;padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-2);box-shadow:var(--shadow-sm);">
-        <h3 style="font-size:22px;margin-bottom:8px;">Proof Launchpad — $997/mo</h3>
-        <p style="color:var(--muted);font-size:15.5px;line-height:1.6;">Never miss another call. 24/7 AI answering, dual visual capture, and instant field reports.</p>
+
+      <div class="feature-card">
+        <div class="icon">🚀</div>
+        <h3>Proof Launchpad — $997/mo</h3>
+        <p>Never miss another call. 24/7 AI answering, dual visual capture, and instant field reports — the entry point for operators ready to stop losing jobs to voicemail.</p>
+        <ul class="price-feats" style="margin-top:16px;">
+          <li>24/7 AI call answering — under 3 seconds</li>
+          <li>Dual visual capture — tech &amp; client</li>
+          <li>Lead scoring &amp; ranking by $ potential</li>
+          <li>AI field reports in seconds</li>
+          <li>Live job board &amp; pipeline tracking</li>
+        </ul>
       </div>
-      <div id="engine" style="margin-bottom:36px;padding:28px;border:1px solid rgba(123,92,255,.3);border-radius:var(--radius);background:linear-gradient(180deg,rgba(123,92,255,.06),rgba(255,255,255,.02));box-shadow:0 20px 60px -20px rgba(123,92,255,.2);">
-        <h3 style="font-size:22px;margin-bottom:8px;">Proof Engine — $2,497/mo · Most popular</h3>
-        <p style="color:var(--muted);font-size:15.5px;line-height:1.6;">Everything in Launchpad, plus full HR, finance dashboard, all 7 IICRC document types, and drag-and-drop crew scheduling.</p>
+
+      <div class="feature-card" style="border-color:var(--border-glow);background:linear-gradient(180deg,rgba(37,99,235,.08),rgba(6,182,212,.03));">
+        <div class="icon">⚙️</div>
+        <h3>Proof Engine — $2,497/mo</h3>
+        <p>Everything in Launchpad, plus full HR, finance dashboard, all 7 IICRC document types, and drag-and-drop crew scheduling. The machine that replaces your office.</p>
+        <ul class="price-feats" style="margin-top:16px;">
+          <li>Full HR — onboarding, certs, payroll</li>
+          <li>Finance dashboard — live P&amp;L &amp; cash flow</li>
+          <li>All 7 IICRC docs, one click</li>
+          <li>Drag-and-drop crew scheduling</li>
+          <li>One autonomous operations machine</li>
+        </ul>
       </div>
-      <div id="engine_pro" style="padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg-2);box-shadow:var(--shadow-sm);">
-        <h3 style="font-size:22px;margin-bottom:8px;">Proof Engine Pro — $4,997/mo · By invitation</h3>
-        <p style="color:var(--muted);font-size:15.5px;line-height:1.6;">Multi-market command dashboard, enterprise analytics, dedicated success manager, and custom API integrations.</p>
+
+      <div class="feature-card">
+        <div class="icon">🏢</div>
+        <h3>Engine Pro — $4,997/mo</h3>
+        <p>Multi-market command dashboard, enterprise analytics, dedicated success manager, and custom API integrations. Built for operators running an empire across locations.</p>
+        <ul class="price-feats" style="margin-top:16px;">
+          <li>One command dashboard, every location</li>
+          <li>Enterprise analytics — P&amp;L per market</li>
+          <li>Dedicated success manager</li>
+          <li>Custom API integrations</li>
+          <li>Franchise-ready scaling infrastructure</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🔒</div>
+        <h3>Every tier includes</h3>
+        <p>No setup fees. Month-to-month on Launchpad and Engine. Your data is always yours — export anytime. IICRC-compliant documentation built into every workflow.</p>
+        <ul class="price-feats" style="margin-top:16px;">
+          <li>No setup fees, no long-term contracts</li>
+          <li>IICRC-compliant documentation</li>
+          <li>You own your data — export anytime</li>
+          <li>Cancel anytime</li>
+          <li>30-day money-back guarantee</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">📈</div>
+        <h3>Scale when you're ready</h3>
+        <p>Start where you are and upgrade as you grow. Every tier is designed to feed the next — Pulse crews become Launchpad operators, Launchpad operators become Engine empires.</p>
+        <ul class="price-feats" style="margin-top:16px;">
+          <li>Upgrade or downgrade anytime</li>
+          <li>Changes take effect next billing cycle</li>
+          <li>No migration downtime</li>
+          <li>Your data carries over seamlessly</li>
+          <li>Talk to sales for custom volume pricing</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTERACTIVE COMPARISON — Proof vs the old way
+     ============================================================ -->
+<section class="section-glow">
+  <div class="orb orb-blue orb-md" style="bottom:10%;left:-5%;opacity:.15;" data-parallax="0.06"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> The Difference</div>
+      <h2>Proof vs <span class="grad-text">the old way.</span></h2>
+      <p>See what changes when you replace spreadsheets, voicemail, and manual documentation with an autonomous platform.</p>
+    </div>
+    <div class="compare reveal-stagger">
+      <div class="compare-col manual">
+        <h3>The Old Way <span class="tag">Before</span></h3>
+        <ul class="compare-list">
+          <li>73% of after-hours calls go to voicemail — each one is a lost job</li>
+          <li>4.2 hours average documentation time per job</li>
+          <li>Office manager salary: $45,000–$65,000/year</li>
+          <li>Crew scheduling done on whiteboards and group chats</li>
+          <li>No centralized record of photos, reports, or communications</li>
+          <li>Compliance depends on individual crew habits</li>
+          <li>Scaling means hiring more office staff, not more crews</li>
+          <li>Leads slip through the cracks during busy seasons</li>
+        </ul>
+      </div>
+      <div class="compare-col ai">
+        <h3>Proof AI <span class="tag">After</span></h3>
+        <ul class="compare-list">
+          <li>100% of calls answered in under 3 seconds, 24/7</li>
+          <li>22-minute average documentation time — 11x faster</li>
+          <li>Replaces office manager for $2,497/month or less</li>
+          <li>Drag-and-drop crew scheduling on one dashboard</li>
+          <li>Every photo, report, and call stored in the Evidence Vault</li>
+          <li>IICRC compliance built into every workflow, automatically</li>
+          <li>Scale crews without scaling overhead — the machine handles it</li>
+          <li>Every lead captured, scored, and dispatched automatically</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section>
+<!-- ============================================================
+     FAQ — Pricing specific
+     ============================================================ -->
+<section class="section-dark" id="faq">
+  <div class="orb orb-cyan orb-sm" style="top:15%;left:10%;opacity:.15;"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> FAQ</div>
+      <h2>Pricing questions,<br>answered.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">Is there a setup fee?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>No setup fees on any tier. Proof Launchpad and Engine are month-to-month with no long-term contracts.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I change plans later?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Yes, upgrade or downgrade anytime. Changes take effect on your next billing cycle.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's included in the free year of Proof Pulse?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Full access to the subcontractor job board, Proof Vision inspection camera, paperless work orders, and your contractor rating profile — free for 12 months.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer enterprise pricing?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Engine Pro is designed for multi-location operations. For custom volume pricing, contact our sales team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA — Still deciding?
+     ============================================================ -->
+<section style="padding:120px 0;">
   <div class="wrap">
     <div class="cta-banner reveal">
       <div class="glow"></div>
       <div class="eyebrow"><span class="dot"></span> Still deciding?</div>
-      <h2>Talk to our <span class="grad-text">team.</span></h2>
-      <p>We'll help you find the right tier for your operation — no pressure, no demos required.</p>
+      <h2>Find the right tier<br>for your operation.</h2>
+      <p>We'll help you pick the package that fits — no pressure, no demos required. Talk to our team or get started today.</p>
       <div class="btns">
-        <a href="get-started.html" class="btn btn-primary" data-magnetic>Get Started →</a>
-        <a href="contact.html" class="btn btn-ghost">Contact us</a>
+        <a href="get-started.html" class="btn btn-primary btn-lg" data-magnetic>Get Started →</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Our Team</a>
       </div>
+      <ul class="cta-banner-features">
+        <li>30-minute strategy call</li>
+        <li>No credit card required</li>
+        <li>30-day money-back guarantee</li>
+        <li>Cancel anytime</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -158,7 +346,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html"><img src="logo.png" alt="Proof AI" style="height:20px;width:auto;margin-bottom:16px;"></a>
+        <img src="logo.png" alt="Proof AI" style="filter:brightness(0) invert(1);">
         <p>Field service intelligence. AI that answers, documents, and connects.</p>
         <div class="social-links" style="margin-top:20px;">
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
@@ -167,19 +355,19 @@
         </div>
       </div>
       <div class="fcol"><h5>Products</h5>
-        <a href="index.html#vision">Proof Vision</a><a href="index.html#dispatch">Proof AI Dispatch</a><a href="index.html#pulse">Proof Pulse</a><a href="platform.html">Platform Architecture</a>
+        <a href="index.html#dispatch">Proof AI Dispatch</a><a href="index.html#vision">Proof Vision</a><a href="index.html#pulse">Proof Pulse</a><a href="platform.html">Platform</a>
       </div>
       <div class="fcol"><h5>Packages</h5>
-        <a href="pricing.html">See all pricing</a><a href="pricing.html#pulse">Proof Pulse</a><a href="pricing.html#launchpad">Proof Launchpad</a><a href="pricing.html#engine">Proof Engine</a><a href="pricing.html#engine_pro">Proof Engine Pro</a>
+        <a href="pricing.html">See all pricing</a><a href="pricing.html#pulse">Proof Pulse</a><a href="pricing.html#launchpad">Proof Launchpad</a><a href="pricing.html#engine">Proof Engine</a><a href="pricing.html#engine_pro">Engine Pro</a>
       </div>
       <div class="fcol"><h5>Industries</h5>
         <a href="industry-cleaning.html">Commercial Cleaning</a><a href="industry-construction.html">Construction Mgmt</a><a href="industry-electrical.html">Electrical</a><a href="industry-hvac.html">HVAC</a><a href="industry-plumbing.html">Plumbing</a><a href="industry-restoration.html">Restoration</a><a href="industry-roofing.html">Roofing</a>
       </div>
       <div class="fcol"><h5>Resources</h5>
-        <a href="help.html">Help Center</a><a href="blog.html">Blog</a><a href="glossary.html">Glossary</a><a href="case-studies.html">Case Studies</a><a href="state-of-restoration.html">State of Restoration 2026</a>
+        <a href="help.html">Help Center</a><a href="blog.html">Blog</a><a href="glossary.html">Glossary</a><a href="case-studies.html">Case Studies</a><a href="changelog.html">Changelog</a><a href="state-of-restoration.html">State of Restoration</a><a href="security.html">Security</a>
       </div>
       <div class="fcol"><h5>Company</h5>
-        <a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="msa.html">MSA</a>
+        <a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie.html">Cookie Policy</a><a href="msa.html">MSA</a>
       </div>
     </div>
     <div class="footer-bottom">

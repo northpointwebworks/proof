@@ -12,8 +12,10 @@
 <body>
 
 <div class="noise"></div>
-<div class="aurora"></div>
+<div class="mesh-bg"></div>
+<div class="mouse-glow"></div>
 
+<!-- HEADER -->
 <header>
   <nav>
     <a href="index.html" class="brand"><img src="logo.png" alt="Proof AI"></a>
@@ -21,19 +23,37 @@
       <a href="index.html#dispatch">Proof AI Dispatch</a>
       <a href="index.html#vision">Proof Vision</a>
       <a href="index.html#pulse">Proof Pulse</a>
-      <a href="platform.html">Platform Architecture</a>
+      <a href="platform.html">Platform</a>
       <a href="pricing.html">Packages</a>
       <a href="index.html#faq">FAQ</a>
     </div>
     <div class="nav-actions">
+      <a href="contact.html" class="btn btn-ghost btn-sm">Sign In</a>
       <a href="get-started.html" class="btn btn-primary btn-sm" data-magnetic>Get Started</a>
     </div>
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" style="padding-top:170px;padding-bottom:40px;">
+<!-- BREADCRUMBS -->
+<section class="breadcrumbs">
+  <div class="wrap">
+    <div class="breadcrumb-trail">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Contact</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HERO — Dark gradient with mesh and orbs
+     ============================================================ -->
+<section class="hero section-dark">
   <div class="hero-ring"></div>
+  <div class="orb orb-blue orb-lg" style="top:5%;left:-10%;opacity:.35;" data-parallax="0.1"></div>
+  <div class="orb orb-cyan orb-md" style="bottom:10%;right:-5%;opacity:.25;" data-parallax="0.06"></div>
+
   <div class="wrap hero-inner">
     <div class="eyebrow reveal"><span class="dot"></span> Contact</div>
     <h1 class="reveal">Let's <span class="grad-text">talk.</span></h1>
@@ -41,26 +61,177 @@
   </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section style="padding-top:20px;">
-  <div class="wrap" style="max-width:640px;">
+<!-- ============================================================
+     CONTACT METHODS — 3 cards on glowing background
+     ============================================================ -->
+<section class="section-glow" id="methods">
+  <div class="orb orb-blue orb-md" style="top:15%;left:-8%;" data-parallax="0.05"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> How to Reach Us</div>
+      <h2>Three ways to <span class="grad-text">get in touch.</span></h2>
+      <p>Pick the path that fits — sales, support, or enterprise. We respond fast.</p>
+    </div>
+    <div class="feature-grid reveal-stagger">
+      <div class="glass-card">
+        <div class="bento-icon">💬</div>
+        <h3>Sales</h3>
+        <p>Talk to our team about packages, demos, and pricing.</p>
+        <p class="mono" style="color:var(--cyan-light);font-size:14px;margin:12px 0 20px;">sales@proofco.ai</p>
+        <a href="get-started.html" class="btn btn-primary btn-sm" data-magnetic>Book a Demo →</a>
+      </div>
+      <div class="glass-card">
+        <div class="bento-icon">🛠️</div>
+        <h3>Support</h3>
+        <p>Technical questions, account issues, and product help.</p>
+        <p class="mono" style="color:var(--cyan-light);font-size:14px;margin:12px 0 20px;">support@proofco.ai</p>
+        <a href="help.html" class="btn btn-ghost btn-sm">Visit Help Center →</a>
+      </div>
+      <div class="glass-card">
+        <div class="bento-icon">🏢</div>
+        <h3>Enterprise</h3>
+        <p>Multi-location deployments, custom integrations, and API access.</p>
+        <p class="mono" style="color:var(--cyan-light);font-size:14px;margin:12px 0 20px;">enterprise@proofco.ai</p>
+        <a href="#contact-form" class="btn btn-ghost btn-sm">Contact Sales →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT FORM — Glass card on dark background
+     ============================================================ -->
+<section class="section-dark" id="contact-form">
+  <div class="orb orb-cyan orb-md" style="bottom:5%;right:-10%;opacity:.2;" data-parallax="0.05"></div>
+  <div class="wrap" style="max-width:720px;">
+    <div class="section-head center reveal" style="margin-bottom:36px;">
+      <div class="eyebrow"><span class="dot"></span> Send a Message</div>
+      <h2>Drop us a line.</h2>
+    </div>
     <div class="glass reveal" style="padding:40px;">
-      <form id="contactForm" style="display:grid;gap:16px;">
-        <input required id="cf-name" type="text" placeholder="Your Name" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-        <input required id="cf-email" type="email" placeholder="Work Email" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-        <input id="cf-company" type="text" placeholder="Company Name" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-        <select id="cf-topic" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-          <option>Scheduling a demo</option>
-          <option>Pricing &amp; packages</option>
-          <option>Technical support</option>
-          <option>Partnership or integration</option>
-          <option>Careers</option>
-          <option>Something else</option>
-        </select>
-        <textarea id="cf-message" required placeholder="Your message" rows="5" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;resize:vertical;color:var(--text);"></textarea>
-        <button type="submit" class="btn btn-primary" style="justify-self:start;" data-magnetic>Send Message →</button>
-        <p style="color:var(--muted-2);font-size:13.5px;">Clicking send opens Gmail with your message pre-filled to Priority@proofco.ai — just hit send there.</p>
+      <form id="contactForm" style="display:grid;gap:18px;">
+        <div class="field">
+          <label for="cf-name" style="display:block;font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:500;">Your Name <span style="color:var(--cyan);">*</span></label>
+          <input id="cf-name" name="name" type="text" class="input" placeholder="Jane Operator" required>
+        </div>
+        <div class="field">
+          <label for="cf-email" style="display:block;font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:500;">Work Email <span style="color:var(--cyan);">*</span></label>
+          <input id="cf-email" name="email" type="email" class="input" placeholder="jane@company.com" required>
+        </div>
+        <div class="field">
+          <label for="cf-company" style="display:block;font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:500;">Company Name</label>
+          <input id="cf-company" name="company" type="text" class="input" placeholder="Acme Restoration">
+        </div>
+        <div class="field">
+          <label for="cf-topic" style="display:block;font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:500;">Topic</label>
+          <select id="cf-topic" name="topic" class="input">
+            <option>Scheduling a demo</option>
+            <option>Pricing &amp; packages</option>
+            <option>Technical support</option>
+            <option>Partnership or integration</option>
+            <option>Careers</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-message" style="display:block;font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:500;">Message <span style="color:var(--cyan);">*</span></label>
+          <textarea id="cf-message" name="message" class="input" rows="5" placeholder="Tell us what you're looking for..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" data-magnetic>Send Message →</button>
+        <p style="color:var(--muted-2);font-size:13.5px;line-height:1.5;">Clicking send opens Gmail with your message pre-filled to Priority@proofco.ai — just hit send there.</p>
       </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ — Contact-specific questions
+     ============================================================ -->
+<section class="section-glow" id="faq">
+  <div class="orb orb-blue orb-md" style="top:20%;right:-8%;" data-parallax="0.05"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> FAQ</div>
+      <h2>Contact questions, <span class="grad-text">answered.</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q">How fast will you respond?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>We respond to all inquiries within one business day. For urgent technical issues, use the support email and we'll get back to you within 2 hours during business hours.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I schedule a demo?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Yes — select 'Scheduling a demo' in the topic dropdown and tell us your availability. We'll set up a 30-minute screen share to walk you through the platform.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer phone support?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Proof Engine and Engine Pro customers get phone support during business hours. All tiers get email support and access to our Help Center.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Where is Proof AI headquartered?<span class="arrow">+</span></div>
+        <div class="faq-a"><p>Proof AI is a remote-first company with team members across North America. Our registered office is in Delaware.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAP / REMOTE-FIRST PLACEHOLDER
+     ============================================================ -->
+<section class="section-darker">
+  <div class="grid-overlay"></div>
+  <div class="orb orb-cyan orb-lg" style="top:30%;left:-15%;opacity:.12;" data-parallax="0.04"></div>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow"><span class="dot"></span> Where We Are</div>
+      <h2>Our Team — Remote-First,<br>North America</h2>
+      <p>Proof AI was built remote-first from day one. Our team spans coast to coast — and so does our coverage.</p>
+    </div>
+    <div class="reveal" style="position:relative;max-width:960px;margin:0 auto;border-radius:24px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,rgba(37,99,235,.06),rgba(6,182,212,.03));padding:60px 40px;text-align:center;">
+      <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(37,99,235,.12),transparent 40%),radial-gradient(circle at 80% 70%,rgba(6,182,212,.1),transparent 40%);"></div>
+      <div style="position:relative;">
+        <div style="font-size:48px;line-height:1;margin-bottom:20px;">🗺️</div>
+        <h3 style="font-size:22px;margin-bottom:12px;">Distributed by Design</h3>
+        <p style="color:var(--muted);max-width:520px;margin:0 auto 32px;line-height:1.6;">Team members in Vancouver, Austin, Toronto, Denver, Atlanta, and Boston — online and answering when your customers call, wherever they are.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+          <span class="chip">Vancouver</span>
+          <span class="chip">Austin</span>
+          <span class="chip">Toronto</span>
+          <span class="chip">Denver</span>
+          <span class="chip">Atlanta</span>
+          <span class="chip">Boston</span>
+          <span class="chip">+ wherever our crew lives</span>
+        </div>
+        <div class="metric-row" style="max-width:480px;margin:36px auto 0;">
+          <div class="metric"><div class="v">6</div><div class="k">Hubs</div></div>
+          <div class="metric"><div class="v">24/7</div><div class="k">Coverage</div></div>
+          <div class="metric"><div class="v">100%</div><div class="k">Remote</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA BANNER
+     ============================================================ -->
+<section style="padding:120px 0;">
+  <div class="wrap">
+    <div class="cta-banner reveal">
+      <div class="glow"></div>
+      <div class="eyebrow"><span class="dot"></span> Ready to get started?</div>
+      <h2>Stop losing jobs<br>to voicemail.</h2>
+      <p>Get started with Proof AI today. 30-minute strategy call. No credit card required. See your ROI live.</p>
+      <div class="btns">
+        <a href="get-started.html" class="btn btn-primary btn-lg" data-magnetic>Schedule Demo →</a>
+        <a href="pricing.html" class="btn btn-ghost btn-lg">See Pricing</a>
+      </div>
+      <ul class="cta-banner-features">
+        <li>30-minute strategy call</li>
+        <li>No credit card required</li>
+        <li>See your ROI live</li>
+        <li>Cancel anytime</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -70,7 +241,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html"><img src="logo.png" alt="Proof AI" style="height:20px;width:auto;margin-bottom:16px;"></a>
+        <img src="logo.png" alt="Proof AI" style="filter:brightness(0) invert(1);">
         <p>Field service intelligence. AI that answers, documents, and connects.</p>
         <div class="social-links" style="margin-top:20px;">
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
@@ -79,19 +250,19 @@
         </div>
       </div>
       <div class="fcol"><h5>Products</h5>
-        <a href="index.html#vision">Proof Vision</a><a href="index.html#dispatch">Proof AI Dispatch</a><a href="index.html#pulse">Proof Pulse</a><a href="platform.html">Platform Architecture</a>
+        <a href="index.html#dispatch">Proof AI Dispatch</a><a href="index.html#vision">Proof Vision</a><a href="index.html#pulse">Proof Pulse</a><a href="platform.html">Platform Architecture</a>
       </div>
       <div class="fcol"><h5>Packages</h5>
-        <a href="pricing.html">See all pricing</a><a href="pricing.html#pulse">Proof Pulse</a><a href="pricing.html#launchpad">Proof Launchpad</a><a href="pricing.html#engine">Proof Engine</a><a href="pricing.html#engine_pro">Proof Engine Pro</a>
+        <a href="pricing.html">See all pricing</a><a href="pricing.html#pulse">Proof Pulse</a><a href="pricing.html#launchpad">Proof Launchpad</a><a href="pricing.html#engine">Proof Engine</a><a href="pricing.html#engine_pro">Engine Pro</a>
       </div>
       <div class="fcol"><h5>Industries</h5>
         <a href="industry-cleaning.html">Commercial Cleaning</a><a href="industry-construction.html">Construction Mgmt</a><a href="industry-electrical.html">Electrical</a><a href="industry-hvac.html">HVAC</a><a href="industry-plumbing.html">Plumbing</a><a href="industry-restoration.html">Restoration</a><a href="industry-roofing.html">Roofing</a>
       </div>
       <div class="fcol"><h5>Resources</h5>
-        <a href="help.html">Help Center</a><a href="blog.html">Blog</a><a href="glossary.html">Glossary</a><a href="case-studies.html">Case Studies</a><a href="state-of-restoration.html">State of Restoration 2026</a>
+        <a href="help.html">Help Center</a><a href="blog.html">Blog</a><a href="glossary.html">Glossary</a><a href="case-studies.html">Case Studies</a><a href="changelog.html">Changelog</a><a href="security.html">Security</a><a href="state-of-restoration.html">State of Restoration 2026</a>
       </div>
       <div class="fcol"><h5>Company</h5>
-        <a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="msa.html">MSA</a>
+        <a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie.html">Cookie Policy</a><a href="msa.html">MSA</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -106,21 +277,5 @@
 </footer>
 
 <script src="assets/app.js"></script>
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('cf-name').value;
-  const email = document.getElementById('cf-email').value;
-  const company = document.getElementById('cf-company').value;
-  const topic = document.getElementById('cf-topic').value;
-  const message = document.getElementById('cf-message').value;
-  const subject = encodeURIComponent(`[${topic}] Website inquiry from ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\nMessage:\n${message}`
-  );
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Priority@proofco.ai&su=${subject}&body=${body}`;
-  window.open(gmailUrl, '_blank');
-});
-</script>
 </body>
 </html>
