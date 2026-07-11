@@ -85,14 +85,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-// ---- Gmail compose helper ----
-function openGmailCompose(subject, bodyLines) {
-  const body = bodyLines.map(l => l.replace(/ /g, '%20').replace(/\n/g, '%0A')).join('%0A%0A');
-  const subjectEnc = encodeURIComponent(subject);
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Priority@proofco.ai&su=${subjectEnc}&body=${body}`;
-  window.open(gmailUrl, '_blank');
-}
-
 // ---- Magnetic buttons ----
 document.querySelectorAll('[data-magnetic]').forEach(btn => {
   btn.addEventListener('mousemove', (e) => {
@@ -128,9 +120,7 @@ const wfSteps = document.querySelectorAll('.wf-step');
 if (wfSteps.length > 0) {
   const wfIO = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('active');
-      }
+      if (e.isIntersecting) e.target.classList.add('active');
     });
   }, { threshold: 0.5, rootMargin: '-80px 0px -80px 0px' });
   wfSteps.forEach(s => wfIO.observe(s));
@@ -146,7 +136,7 @@ if (dashFrame && window.matchMedia('(hover: hover)').matches) {
     const cy = rect.top + rect.height / 2;
     const rx = ((e.clientY - cy) / rect.height) * -6;
     const ry = ((e.clientX - cx) / rect.width) * 6;
-    dashFrame.style.transform = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(0)`;
+    dashFrame.style.transform = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg)`;
   });
   heroSection.addEventListener('mouseleave', () => {
     dashFrame.style.transform = '';
