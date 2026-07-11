@@ -1,0 +1,9 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proof AI marketing site (static HTML)",
+  "scripts": {
+    "build": "echo \"Static site — no build step\" && exit 0"
+  }
+}
