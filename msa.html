@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Proof AI — Contact Us</title>
-<meta name="description" content="Tell us what you're looking for and we'll get back to you within one business day." />
+<title>Master Services Agreement — Proof AI</title>
+<meta name="description" content="The agreement governing Proof AI services." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
@@ -31,41 +31,42 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" style="padding-top:170px;padding-bottom:40px;">
   <div class="hero-ring"></div>
   <div class="wrap hero-inner">
-    <div class="eyebrow reveal"><span class="dot"></span> Contact</div>
-    <h1 class="reveal">Let's <span class="grad-text">talk.</span></h1>
-    <p class="sub reveal">Tell us what you're looking for and we'll get back to you within one business day.</p>
+    <div class="eyebrow reveal"><span class="dot"></span> Legal</div>
+    <h1 class="reveal">Master <span class="grad-text">Services Agreement</span></h1>
+    <p class="sub reveal">The agreement governing Proof AI services.</p>
   </div>
 </section>
 
-<!-- CONTACT FORM -->
 <section style="padding-top:20px;">
-  <div class="wrap" style="max-width:640px;">
-    <div class="glass reveal" style="padding:40px;">
-      <form id="contactForm" style="display:grid;gap:16px;">
-        <input required id="cf-name" type="text" placeholder="Your Name" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-        <input required id="cf-email" type="email" placeholder="Work Email" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-        <input id="cf-company" type="text" placeholder="Company Name" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-        <select id="cf-topic" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);">
-          <option>Scheduling a demo</option>
-          <option>Pricing &amp; packages</option>
-          <option>Technical support</option>
-          <option>Partnership or integration</option>
-          <option>Careers</option>
-          <option>Something else</option>
-        </select>
-        <textarea id="cf-message" required placeholder="Your message" rows="5" style="padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--bg);font-family:inherit;font-size:15px;resize:vertical;color:var(--text);"></textarea>
-        <button type="submit" class="btn btn-primary" style="justify-self:start;" data-magnetic>Send Message →</button>
-        <p style="color:var(--muted-2);font-size:13.5px;">Clicking send opens Gmail with your message pre-filled to Priority@proofco.ai — just hit send there.</p>
-      </form>
-    </div>
+  <div class="wrap legal-article reveal">
+    <p class="last-updated">Effective Date: March 18, 2026</p>
+    <h2>1. Definitions</h2>
+    <ul>
+      <li><strong>Proof AI</strong> refers to Proof AI and its affiliates providing the platform and services described herein.</li>
+      <li><strong>Customer</strong> refers to the company or individual contracting for Proof AI services.</li>
+      <li><strong>Service</strong> refers to any product, feature, or capability provided by Proof AI under this Agreement, including dispatch, vision, pulse, HR, finance, and documentation modules.</li>
+      <li><strong>Documentation</strong> refers to all field reports, photos, scopes, logs, and compliance records generated or stored through the platform.</li>
+    </ul>
+    <h2>2. Services</h2>
+    <p>Proof provides dispatch, vision, pulse, HR, finance, and documentation services as described in the selected package. The specific scope of services, features, and usage limits is determined by the package the Customer subscribes to at <a href="pricing.html">proof.ai/pricing</a>. Proof may update or expand services and will provide notice of any material changes to the Customer's subscribed scope.</p>
+    <h2>3. Customer Obligations</h2>
+    <p>Customer must provide accurate information when configuring and using the Service, maintain valid and current certifications required for the work being performed (including IICRC certifications where applicable), and comply with all applicable laws and regulations in the jurisdictions where Customer operates. Customer is responsible for the accuracy of all data it submits to the platform.</p>
+    <h2>4. Data Processing</h2>
+    <p>Proof processes Customer data in accordance with the <a href="privacy.html">Privacy Policy</a>. Customer retains full ownership of all data it submits, generates, or stores through the platform. Proof processes such data solely to provide and improve the Service and does not use Customer data to train third-party AI models. Customer may export or delete its data at any time.</p>
+    <h2>5. Fees and Payment</h2>
+    <p>Fees are determined by the selected package and billed monthly in advance. All fees are non-refundable except as required by law. Proof will provide at least 30 days' notice before any price change. Late payments may result in suspension of Service after notice.</p>
+    <h2>6. Confidentiality</h2>
+    <p>Both parties agree to maintain the confidentiality of all non-public information disclosed by the other party, including business operations, pricing, customer lists, and technical details of the Service. This obligation survives termination of this Agreement for a period of three years.</p>
+    <h2>7. Term and Termination</h2>
+    <p>This Agreement is effective upon Customer's acceptance and remains in effect for the duration of the subscribed package. Either party may terminate this Agreement with 30 days' written notice. Upon termination, Proof will make Customer data available for export for 30 days, after which it may be permanently deleted.</p>
+    <h2>8. Contact</h2>
+    <p>Questions about this Agreement can be sent to <a href="contact.html">our contact page</a> or emailed to Priority@proofco.ai.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -106,21 +107,5 @@
 </footer>
 
 <script src="assets/app.js"></script>
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('cf-name').value;
-  const email = document.getElementById('cf-email').value;
-  const company = document.getElementById('cf-company').value;
-  const topic = document.getElementById('cf-topic').value;
-  const message = document.getElementById('cf-message').value;
-  const subject = encodeURIComponent(`[${topic}] Website inquiry from ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\nMessage:\n${message}`
-  );
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Priority@proofco.ai&su=${subject}&body=${body}`;
-  window.open(gmailUrl, '_blank');
-});
-</script>
 </body>
 </html>

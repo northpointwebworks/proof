@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Get Started — Proof AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2F7FFF;--violet:#7B5CFF;--magenta:#D6428C;--orange:#FF7A3D;
+  --bg:#FAFAF7;--surface:rgba(20,22,35,0.035);--surface-2:rgba(20,22,35,0.07);
+  --border:rgba(20,22,35,0.10);--text:#12141C;--muted:#5B6273;--muted-2:#8A90A0;
+  --grad:linear-gradient(90deg,var(--blue),var(--violet) 45%,var(--magenta) 72%,var(--orange));
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--violet);color:#fff;}
+
+/* background */
+.aurora{
+  position:fixed;top:-20%;left:50%;transform:translateX(-50%);
+  width:1200px;height:1200px;z-index:0;pointer-events:none;
+  background:radial-gradient(circle at 30% 30%,rgba(47,127,255,.12),transparent 55%),
+             radial-gradient(circle at 70% 60%,rgba(123,92,255,.09),transparent 55%),
+             radial-gradient(circle at 50% 80%,rgba(214,66,140,.07),transparent 60%);
+  filter:blur(60px);animation:drift 22s ease-in-out infinite alternate;
+}
+@keyframes drift{from{transform:translateX(-52%) translateY(0);}to{transform:translateX(-48%) translateY(24px);}}
+
+/* layout */
+.gs-shell{
+  position:relative;z-index:1;min-height:100vh;
+  display:grid;grid-template-rows:auto 1fr;
+}
+/* top bar */
+.gs-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 32px;border-bottom:1px solid var(--border);
+  background:rgba(250,250,247,0.80);backdrop-filter:blur(16px) saturate(140%);
+}
+.gs-brand{display:flex;align-items:center;gap:12px;}
+.gs-brand .brand-icon{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--grad);display:flex;align-items:center;justify-content:center;flex:none;
+}
+.gs-brand .brand-icon svg{width:20px;height:20px;color:#fff;}
+.gs-brand .brand-text{display:flex;flex-direction:column;}
+.gs-brand .brand-name{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;line-height:1.2;}
+.gs-brand .brand-sub{font-size:12px;color:var(--muted);}
+.gs-step-label{font-size:13.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+
+/* body */
+.gs-body{
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:48px 24px 80px;
+}
+.gs-card{
+  width:100%;max-width:640px;
+}
+
+/* step tabs */
+.step-tabs{
+  display:flex;gap:8px;margin-bottom:40px;
+}
+.step-tab{
+  display:flex;align-items:center;gap:8px;
+  padding:9px 16px;border-radius:100px;font-size:13px;font-weight:600;
+  border:1px solid var(--border);cursor:pointer;transition:all .25s;
+  color:var(--muted);background:var(--surface);letter-spacing:.04em;text-transform:uppercase;
+}
+.step-tab.active{
+  background:var(--grad);color:#fff;border-color:transparent;
+  box-shadow:0 4px 18px -4px rgba(123,92,255,.5);
+}
+.step-tab .tab-icon{width:16px;height:16px;opacity:.7;}
+.step-tab.active .tab-icon{opacity:1;}
+
+/* form heading */
+.form-heading{margin-bottom:36px;}
+.form-heading h1{font-size:clamp(26px,4.5vw,38px);font-weight:700;line-height:1.1;margin-bottom:10px;}
+.form-heading p{font-size:16px;color:var(--muted);}
+
+/* form fields */
+.field-group{display:flex;flex-direction:column;gap:16px;margin-bottom:24px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{
+  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text);
+  display:flex;align-items:center;gap:5px;
+}
+.field label .req{color:var(--magenta);font-size:13px;}
+.field label .opt{color:var(--muted-2);font-weight:500;font-size:11px;letter-spacing:.03em;text-transform:none;}
+.field input,.field select,.field textarea{
+  padding:13px 16px;border-radius:12px;border:1.5px solid var(--border);
+  background:#fff;font-family:'Inter',sans-serif;font-size:15px;color:var(--text);
+  transition:border-color .2s,box-shadow .2s;outline:none;
+  box-shadow:0 1px 4px rgba(0,0,0,.04);
+}
+.field input::placeholder{color:var(--muted-2);}
+.field input:focus,.field select:focus{
+  border-color:var(--violet);
+  box-shadow:0 0 0 3px rgba(123,92,255,.12),0 1px 4px rgba(0,0,0,.04);
+}
+.field input.error{border-color:var(--magenta);}
+.field .field-error{font-size:12px;color:var(--magenta);margin-top:4px;}
+
+/* form note */
+.form-note{font-size:13px;color:var(--muted-2);text-align:center;margin-bottom:24px;}
+
+/* buttons */
+.btn-continue{
+  width:100%;padding:15px 24px;border-radius:100px;
+  background:var(--grad);background-size:200% 100%;
+  color:#fff;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;
+  border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:transform .25s,box-shadow .25s;
+  box-shadow:0 8px 30px -8px rgba(123,92,255,.6);
+}
+.btn-continue:hover{transform:translateY(-1px);box-shadow:0 12px 36px -6px rgba(123,92,255,.75);}
+.btn-continue:active{transform:translateY(0);}
+.btn-continue svg{width:18px;height:18px;transition:transform .2s;}
+.btn-continue:hover svg{transform:translateX(3px);}
+
+.btn-back{
+  background:none;border:1.5px solid var(--border);color:var(--muted);
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;
+  padding:12px 22px;border-radius:100px;cursor:pointer;
+  display:flex;align-items:center;gap:8px;transition:all .2s;
+}
+.btn-back:hover{border-color:rgba(20,22,35,.2);color:var(--text);}
+
+.btn-row{display:flex;gap:12px;align-items:center;}
+.btn-row .btn-continue{flex:1;}
+
+/* plan cards (step 2) */
+.plan-grid{display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+.plan-card{
+  border:1.5px solid var(--border);border-radius:16px;padding:20px 22px;
+  cursor:pointer;transition:all .25s;background:#fff;
+  display:flex;align-items:flex-start;gap:16px;position:relative;
+}
+.plan-card:hover{border-color:rgba(123,92,255,.4);box-shadow:0 4px 20px -8px rgba(123,92,255,.25);}
+.plan-card.selected{
+  border-color:var(--violet);background:linear-gradient(135deg,rgba(47,127,255,.04),rgba(123,92,255,.06));
+  box-shadow:0 4px 20px -8px rgba(123,92,255,.4);
+}
+.plan-card.popular{border-color:rgba(123,92,255,.4);}
+.popular-pill{
+  position:absolute;top:-11px;left:20px;
+  background:var(--grad);color:#fff;font-size:11px;font-weight:700;
+  padding:4px 11px;border-radius:100px;letter-spacing:.03em;
+}
+.plan-radio{
+  width:20px;height:20px;border-radius:50%;border:2px solid var(--border);
+  flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.plan-card.selected .plan-radio{background:var(--violet);border-color:var(--violet);}
+.plan-radio::after{
+  content:'';width:8px;height:8px;border-radius:50%;background:#fff;
+  opacity:0;transition:opacity .2s;
+}
+.plan-card.selected .plan-radio::after{opacity:1;}
+.plan-info{flex:1;}
+.plan-info .plan-name{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;}
+.plan-info .plan-price{font-size:13px;color:var(--muted);margin-bottom:6px;}
+.plan-info .plan-desc{font-size:13.5px;color:var(--muted);line-height:1.5;}
+
+/* step transition */
+.step{transition:opacity .35s,transform .35s;}
+.step.hidden{opacity:0;transform:translateX(20px);pointer-events:none;position:absolute;inset:0;}
+.step-wrap{position:relative;}
+
+/* divider */
+.divider{height:1px;background:var(--border);margin:28px 0;}
+
+/* success */
+.success-screen{text-align:center;padding:60px 0;}
+.success-icon{
+  width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,rgba(47,127,255,.12),rgba(123,92,255,.18));
+  border:1.5px solid rgba(123,92,255,.3);display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;
+}
+.success-icon svg{width:36px;height:36px;color:var(--violet);}
+.success-screen h2{font-size:28px;margin-bottom:10px;}
+.success-screen p{color:var(--muted);font-size:16px;max-width:420px;margin:0 auto 32px;}
+.btn-home{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 28px;border-radius:100px;background:var(--grad);color:#fff;
+  font-weight:600;font-size:15px;box-shadow:0 8px 30px -8px rgba(123,92,255,.6);
+  transition:transform .2s,box-shadow .2s;border:none;cursor:pointer;
+}
+.btn-home:hover{transform:translateY(-1px);box-shadow:0 12px 36px -6px rgba(123,92,255,.75);}
+
+@media(max-width:600px){
+  .gs-top{padding:16px 20px;}
+  .gs-body{padding:32px 20px 60px;}
+  .field-row{grid-template-columns:1fr;}
+  .step-tabs{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+<div class="aurora"></div>
+<div class="gs-shell">
+
+  <!-- top bar -->
+  <div class="gs-top">
+    <div class="gs-brand">
+      <a href="index.html" class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </a>
+      <div class="brand-text">
+        <span class="brand-name">GET STARTED</span>
+        <span class="brand-sub">Built for operators, not office workers</span>
+      </div>
+    </div>
+    <span class="gs-step-label" id="stepLabel">Step 1 of 2</span>
+  </div>
+
+  <!-- body -->
+  <div class="gs-body">
+    <div class="gs-card">
+
+      <!-- STEP 1 -->
+      <div id="step1">
+        <div class="step-tabs">
+          <div class="step-tab active" id="tab-you">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            YOU
+          </div>
+          <div class="step-tab" id="tab-plan" style="opacity:.5;cursor:default;">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+            PLAN
+          </div>
+        </div>
+
+        <div class="form-heading">
+          <h1>Who's running the operation?</h1>
+          <p>60 seconds — then pick your unfair advantage</p>
+        </div>
+
+        <form id="form1" novalidate>
+          <div class="field-group">
+            <div class="field">
+              <label>Company Name <span class="req">*</span></label>
+              <input type="text" id="companyName" placeholder="Your company name" autocomplete="organization"/>
+              <span class="field-error" id="err-company" style="display:none">Company name is required</span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label>First Name <span class="req">*</span></label>
+                <input type="text" id="firstName" placeholder="First" autocomplete="given-name"/>
+                <span class="field-error" id="err-first" style="display:none">Required</span>
+              </div>
+              <div class="field">
+                <label>Last Name <span class="opt">(optional)</span></label>
+                <input type="text" id="lastName" placeholder="Last" autocomplete="family-name"/>
+              </div>
+            </div>
+            <div class="field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" id="emailAddr" placeholder="you@company.com" autocomplete="email"/>
+              <span class="field-error" id="err-email" style="display:none">Valid email is required</span>
+            </div>
+            <div class="field">
+              <label>Phone <span class="opt">(optional)</span></label>
+              <input type="tel" id="phoneNum" placeholder="(555) 123-4567" autocomplete="tel"/>
+            </div>
+          </div>
+
+          <p class="form-note">Company, first name, and email are required to continue.</p>
+
+          <button type="submit" class="btn-continue">
+            Continue
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="step2" style="display:none;">
+        <div class="step-tabs">
+          <div class="step-tab" id="tab-you-2" style="opacity:.6;cursor:default;">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            YOU
+          </div>
+          <div class="step-tab active" id="tab-plan-2">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+            PLAN
+          </div>
+        </div>
+
+        <div class="form-heading">
+          <h1>Pick your unfair advantage.</h1>
+          <p>Choose the plan that fits your operation — upgrade anytime.</p>
+        </div>
+
+        <div class="plan-grid" id="planGrid">
+          <div class="plan-card" data-plan="pulse" onclick="selectPlan(this)">
+            <div class="plan-radio"></div>
+            <div class="plan-info">
+              <div class="plan-name">Proof Pulse</div>
+              <div class="plan-price">Free first year · For subcontractors</div>
+              <div class="plan-desc">AI-powered job alerts, contractor matching, and crew marketplace access.</div>
+            </div>
+          </div>
+          <div class="plan-card selected" data-plan="launchpad" onclick="selectPlan(this)">
+            <div class="plan-radio"></div>
+            <div class="plan-info">
+              <div class="plan-name">Proof Launchpad</div>
+              <div class="plan-price">$997/mo · For growing operators</div>
+              <div class="plan-desc">24/7 AI answering, dual visual capture, instant field reports, and live dispatch.</div>
+            </div>
+          </div>
+          <div class="plan-card popular" data-plan="engine" onclick="selectPlan(this)">
+            <div class="popular-pill">Most Popular</div>
+            <div class="plan-radio"></div>
+            <div class="plan-info">
+              <div class="plan-name">Proof Engine</div>
+              <div class="plan-price">$2,497/mo · Full operations suite</div>
+              <div class="plan-desc">HR, finance dashboard, 7 IICRC document types, crew scheduling, and everything in Launchpad.</div>
+            </div>
+          </div>
+          <div class="plan-card" data-plan="engine-pro" onclick="selectPlan(this)">
+            <div class="plan-radio"></div>
+            <div class="plan-info">
+              <div class="plan-name">Proof Engine Pro</div>
+              <div class="plan-price">$4,997/mo · By invitation</div>
+              <div class="plan-desc">Multi-market dashboard, enterprise analytics, dedicated success manager, and custom API.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="form-note">Our team will reach out within one business day to confirm your selection.</p>
+
+        <div class="btn-row">
+          <button class="btn-back" onclick="goBack()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+          </button>
+          <button class="btn-continue" onclick="submitForm()">
+            Get My Demo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div id="stepSuccess" style="display:none;">
+        <div class="success-screen">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h2>You're in the queue.</h2>
+          <p>Our team will reach out within one business day. Check your inbox — including spam — for a confirmation from <strong>Priority@proofco.ai</strong>.</p>
+          <a href="index.html" class="btn-home">Back to Proof AI</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+let userData = {};
+let selectedPlan = 'launchpad';
+
+document.getElementById('form1').addEventListener('submit', function(e){
+  e.preventDefault();
+  let valid = true;
+
+  const company = document.getElementById('companyName').value.trim();
+  const first = document.getElementById('firstName').value.trim();
+  const email = document.getElementById('emailAddr').value.trim();
+
+  if(!company){ document.getElementById('err-company').style.display='block'; document.getElementById('companyName').classList.add('error'); valid=false; }
+  else { document.getElementById('err-company').style.display='none'; document.getElementById('companyName').classList.remove('error'); }
+
+  if(!first){ document.getElementById('err-first').style.display='block'; document.getElementById('firstName').classList.add('error'); valid=false; }
+  else { document.getElementById('err-first').style.display='none'; document.getElementById('firstName').classList.remove('error'); }
+
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRe.test(email)){ document.getElementById('err-email').style.display='block'; document.getElementById('emailAddr').classList.add('error'); valid=false; }
+  else { document.getElementById('err-email').style.display='none'; document.getElementById('emailAddr').classList.remove('error'); }
+
+  if(!valid) return;
+
+  userData = {
+    company, first,
+    last: document.getElementById('lastName').value.trim(),
+    email,
+    phone: document.getElementById('phoneNum').value.trim()
+  };
+
+  document.getElementById('step1').style.display = 'none';
+  document.getElementById('step2').style.display = 'block';
+  document.getElementById('stepLabel').textContent = 'Step 2 of 2';
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+function selectPlan(card){
+  document.querySelectorAll('.plan-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  selectedPlan = card.getAttribute('data-plan');
+}
+
+function goBack(){
+  document.getElementById('step2').style.display = 'none';
+  document.getElementById('step1').style.display = 'block';
+  document.getElementById('stepLabel').textContent = 'Step 1 of 2';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function submitForm(){
+  const planNames = {
+    'pulse': 'Proof Pulse (Free)',
+    'launchpad': 'Proof Launchpad ($997/mo)',
+    'engine': 'Proof Engine ($2,497/mo)',
+    'engine-pro': 'Proof Engine Pro ($4,997/mo)'
+  };
+  const planLabel = planNames[selectedPlan] || selectedPlan;
+  const subject = encodeURIComponent(`[Get Started] ${userData.company} — ${planLabel}`);
+  const body = encodeURIComponent(
+    `New signup from Proof website:\n\nCompany: ${userData.company}\nName: ${userData.first} ${userData.last}\nEmail: ${userData.email}\nPhone: ${userData.phone || 'n/a'}\nSelected Plan: ${planLabel}`
+  );
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Priority@proofco.ai&su=${subject}&body=${body}`;
+  window.open(gmailUrl, '_blank');
+
+  document.getElementById('step2').style.display = 'none';
+  document.getElementById('stepSuccess').style.display = 'block';
+  document.getElementById('stepLabel').textContent = 'Done!';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</body>
+</html>
