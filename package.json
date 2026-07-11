@@ -4,6 +4,10 @@
   "private": true,
   "description": "Proof AI marketing site (static HTML)",
   "scripts": {
-    "build": "echo \"Static site — no build step\" && exit 0"
+    "build": "echo \"Static site — no build step\" && exit 0",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
   }
 }
